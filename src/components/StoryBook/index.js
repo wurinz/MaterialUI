@@ -71,11 +71,11 @@ const StoryBook = () => {
                 </Box>
                 <Box mb={3}>
                     <Typography variant="subtitle2">Active</Typography>
-                    <Field label={'Email Address'} placeholder={"Email Address"}/>
+                    <Field autoFocus={true} label={'Email Address'} placeholder={"Email Address"}/>
                 </Box>
                 <Box mb={3}>
                     <Typography variant="subtitle2">Error</Typography>
-                    <Field label={'Password (8 characters)'} placeholder={"Password"}/>
+                    <Field error={true} label={'Password (8 characters)'} placeholder={"Password"}/>
                 </Box>
             </Grid>
         </Grid>

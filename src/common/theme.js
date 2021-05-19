@@ -67,6 +67,7 @@ const theme = createMuiTheme({
                 color: "#000",
                 fontWeight: "bold",
                 fontSize: "14px",
+                paddingLeft: "10px",
                 "&$focused": {
                 color: "#77a814",
                 },

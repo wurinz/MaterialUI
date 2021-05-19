@@ -1,9 +1,12 @@
 import Button from '@material-ui/core/Button';
 import AccessibleForwardIcon from '@material-ui/icons/AccessibleForward';
+import AutorenewIcon from '@material-ui/icons/Autorenew';
+import BluetoothSearchingIcon from '@material-ui/icons/BluetoothSearching';
+
 
 
 const MainButton = (props) => {
-    const { width, color, text } = props;
+    const { width, color, text, icon } = props;
 
     if(width === "large"){
         return(
@@ -11,7 +14,10 @@ const MainButton = (props) => {
                 style={{width: "270px", height: "50px"}}
                 variant="contained"
                 color={color}
-            >{text}</Button>
+            >
+            { icon === "google" ? <AutorenewIcon /> :  null}
+            { icon === "facebook" ? <BluetoothSearchingIcon /> : null }
+            {text}</Button>
         )
     } else if (width === "medium"){
         return (

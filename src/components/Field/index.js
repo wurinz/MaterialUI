@@ -1,11 +1,12 @@
 import { Box, ExpansionPanel } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
+import { useField } from 'formik'
 
 const Field = (props) => {
-    const {label, placeholder} = props;
+    const {label, placeholder, error, autoFocus} = props;
     return (
         <Box>
-            <TextField label={label} placeholder={placeholder}/>
+            <TextField error={error} autoFocus={autoFocus} label={label} placeholder={placeholder}/>
         </Box>
     )
 }
