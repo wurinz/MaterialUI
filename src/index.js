@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Route, Router } from 'react-router';
+import { HashRouter } from 'react-router-dom';
+import StoryBook from './components/StoryBook';
 
 ReactDOM.render(
   <React.StrictMode>
