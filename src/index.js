@@ -3,13 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Route, Router } from 'react-router';
+import { Route, Router, Switch } from 'react-router';
 import { HashRouter } from 'react-router-dom';
+import MainForm  from './components/Form/MainForm';
 import StoryBook from './components/StoryBook';
+
+console.log(window.location.pathname)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HashRouter>
+      <Switch>
+        <Route exact path="/main" component={App} />
+        <Route path="/story-book" component={StoryBook} />
+        <Route path="/sign-up" component={MainForm}/>
+      </Switch>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

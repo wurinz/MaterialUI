@@ -2,19 +2,18 @@ import React from 'react';
 import Box from '../Box'; 
 import MainButton from '../Button';
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
-// import Field from '../Field';
 import Grid from '@material-ui/core/Grid'; 
 import theme from '../../common/theme';
 import { ThemeProvider } from '@material-ui/core/styles';
 
 import Textfield from './Textfield'
 import Button from './Button';
+import { Link } from 'react-router-dom';
+
 
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
-import AppleIcon from '@material-ui/icons/Apple';
 
 
 
@@ -38,7 +37,7 @@ const FORM_VALIDATION = Yup.object().shape({
 const MainForm = () => {
     return (
         <ThemeProvider theme={theme}>
-            <Box width="550px" margin="auto">
+            <Box mt={20} mb={15} width="550px" margin="auto">
             <Grid container spacing={1}>
                 <Grid item xs={12}>
                     <Typography variant="h4">
@@ -81,6 +80,10 @@ const MainForm = () => {
                     </Formik>
                 </Grid>
             </Grid>
+            </Box>
+            
+            <Box ml={10} mt={15}>
+                <Link to="/main"><MainButton width="medium" text="home"/></Link>
             </Box>
         </ThemeProvider>
     )

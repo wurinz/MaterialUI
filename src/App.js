@@ -1,16 +1,13 @@
 import React, { Suspense } from 'react';
-import { Route } from 'react-router-dom';
+import Box from "@material-ui/core/Box";
 import { ThemeProvider } from '@material-ui/core/styles'
-
-import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container'; 
-
-
-import StoryBook from './components/StoryBook';
-import MainForm from './components/Form'
+import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 import theme from './common/theme'
+import MainButton from './components/Button';
+import { Grid } from '@material-ui/core';
 
 
 function App() {
@@ -18,29 +15,30 @@ function App() {
     <Container fixed>
       <Suspense fallback={<p>Loading...</p>}>
         <ThemeProvider theme={theme}>
-
-          {/* <Box display="flex" alignItems="center" mx={'auto'}>
-            <Box p={5}>
-              <Button size="large" variant="contained">
-                  Sign Up
-              </Button>
-            </Box>
-            <Box p={5}>
-              <Button size="medium" variant="contained" color="primary">
-                Sign Up
-              </Button>
-            </Box>
-            <Box p={5}>
-              <Button size="small" variant="contained" color="primary">
-                Sign Up
-              </Button>
-            </Box>
-          </Box> */}
-              <StoryBook />
-              <MainForm />
-
-          
-        </ThemeProvider>
+              <Box width="600px" margin="auto" mt={10} mb={20}>
+              <Typography variant="h4">
+                Hello, I'm Sasha,
+              </Typography>
+              <Typography variant="h5">
+                I was enjoying making this task for you
+              </Typography>
+              <Typography variant="h4">
+                Check it out down below 
+              </Typography>
+              
+              <Grid container spacing={2}>
+                <Grid item xs={6}>
+                  <Link to="/story-book"><MainButton text="Task One" width="large" color="primary"/></Link>
+                </Grid>
+                <Grid item xs={6}>
+                  <Link to="/sign-up"><MainButton text="Task Two" width="large" color="secondary"/></Link>
+                </Grid>
+              </Grid>
+              <Typography variant="h5">
+                Thanks!
+              </Typography>
+              </Box>
+      </ThemeProvider>
         
       </Suspense>
     </Container>

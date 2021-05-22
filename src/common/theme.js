@@ -15,7 +15,10 @@ const theme = createMuiTheme({
         },
         MuiInputLabel: {
             shrink: "true"
-        }
+        },
+        // sizes: {
+            
+        // }
     },
 
 
@@ -56,7 +59,7 @@ const theme = createMuiTheme({
                 "&$focused": {
                     border: "2px solid #77a814",
                 },
-                "&$invalid": {
+                "&$error": {
                     border: "2px solid #FF0000"
                 }
             }, 
@@ -71,9 +74,6 @@ const theme = createMuiTheme({
                 "&$focused": {
                 color: "#77a814",
                 },
-                "&$invalid": {
-                    border: "2px solid #FF0000"
-                }
             }
         }
     }}

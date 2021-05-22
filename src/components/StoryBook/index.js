@@ -2,11 +2,12 @@ import React from 'react';
 import Box from '../Box'; 
 import MainButton from '../Button';
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
 import Field from '../Field';
 import Grid from '@material-ui/core/Grid'; 
 import theme from '../../common/theme';
-import { ThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -14,7 +15,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 const StoryBook = () => {
     return(
         <ThemeProvider theme={theme}>
-        <Box mt={5} mb={5}>
+        <Box mt={5} mb={15} width="1200px" margin="auto">
             <Grid container spacing={5}>
                 <Grid item xs={6}>
                     <Typography variant="subtitle1">Buttons</Typography>
@@ -80,6 +81,9 @@ const StoryBook = () => {
             </Grid>
         </Grid>
     </Box>
+    <Box ml={10} mb={5}>
+                <Link to="/main"><MainButton width="medium" text="home"/></Link>
+            </Box>
     </ThemeProvider>
     )
 }
